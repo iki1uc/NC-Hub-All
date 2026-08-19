@@ -3,284 +3,148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ROMANUM IMPERIA · NC‑Hub‑All · OCTA</title>
-
+<title>POT · ohne Regeln</title>
 <style>
-:root {
-    --gold: #d4a017;
-    --marble: #e8ddd0;
-    --dark: #1a1512;
-    --red: #8b1a1a;
-    --bronze: #cd7f32;
-}
-* { margin:0; padding:0; box-sizing:border-box; }
-body {
-    background: var(--dark);
-    color: var(--marble);
-    font-family: 'Georgia', 'Times New Roman', serif;
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background: #0a0a0f;
+    color: #d0d0e0;
+    font-family: 'Georgia', serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 20px;
-}
-.imperium {
-    max-width: 900px;
+    flex-direction: column;
+  }
+  .kern {
+    max-width: 700px;
     width: 100%;
-    background: #1e1814;
-    border: 3px solid var(--gold);
-    border-radius: 16px;
-    padding: 40px 35px;
-    box-shadow: 0 0 60px rgba(212,160,23,0.08);
-    position: relative;
-}
-.imperium::before {
-    content: "SENATVS POPVLVSQVE ROMANVS";
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--dark);
-    padding: 0 20px;
-    font-size: 11px;
-    letter-spacing: 4px;
-    color: var(--gold);
-    text-shadow: 0 0 10px rgba(212,160,23,0.2);
-}
-h1 {
-    font-size: 2.8rem;
+    background: #12121a;
+    border: 1px solid #2a2a3a;
+    border-radius: 40px;
+    padding: 40px 30px;
     text-align: center;
-    color: var(--gold);
-    letter-spacing: 6px;
-    font-weight: 300;
-    border-bottom: 1px solid rgba(212,160,23,0.2);
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-    text-shadow: 0 0 30px rgba(212,160,23,0.05);
-}
-h1 small {
-    display: block;
-    font-size: 0.7rem;
-    letter-spacing: 8px;
-    color: var(--bronze);
-    margin-top: 6px;
-    font-style: italic;
-}
-.sub {
-    text-align: center;
-    font-size: 0.85rem;
-    color: var(--bronze);
-    letter-spacing: 2px;
-    margin-bottom: 30px;
-    font-style: italic;
-}
-.achse {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin: 25px 0 30px 0;
-}
-.achse-item {
-    background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(212,160,23,0.08);
-    border-radius: 10px;
-    padding: 14px 10px;
-    text-align: center;
+    box-shadow: 0 0 80px rgba(200,180,100,0.02);
     transition: all 0.3s;
-}
-.achse-item:hover {
-    border-color: var(--gold);
-    background: rgba(212,160,23,0.03);
-}
-.achse-item .sym { font-size: 22px; display: block; margin-bottom: 4px; }
-.achse-item .label { font-size: 11px; color: var(--gold); letter-spacing: 2px; }
-.achse-item .desc { font-size: 9px; color: #6a5f55; margin-top: 4px; }
-
-.output {
-    background: #0d0a08;
-    border: 1px solid #2a221c;
-    border-radius: 10px;
+  }
+  .kern:hover {
+    border-color: #4a4a5a;
+  }
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 300;
+    letter-spacing: 6px;
+    color: #c0b090;
+    margin-bottom: 10px;
+  }
+  .sub {
+    font-size: 0.8rem;
+    color: #5a5a6a;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+  }
+  .ausgabe {
+    background: #0a0a10;
+    border-left: 2px solid #4a4a5a;
     padding: 18px 20px;
-    font-size: 13px;
+    font-size: 0.8rem;
     white-space: pre-wrap;
     font-family: 'Courier New', monospace;
-    color: #b8a99a;
-    margin: 15px 0 25px 0;
-    min-height: 90px;
-    border-left: 3px solid var(--gold);
-}
-.btn {
+    color: #b0b0c0;
+    border-radius: 8px;
+    margin: 20px 0 30px 0;
+    min-height: 70px;
+    text-align: left;
+  }
+  .aktion {
     background: transparent;
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    padding: 10px 28px;
-    border-radius: 30px;
+    border: 1px solid #4a4a5a;
+    color: #c0b090;
+    padding: 10px 30px;
+    border-radius: 40px;
     font-family: inherit;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     letter-spacing: 2px;
     cursor: pointer;
     transition: all 0.3s;
-}
-.btn:hover {
-    background: var(--gold);
-    color: var(--dark);
-    box-shadow: 0 0 40px rgba(212,160,23,0.1);
-}
-.btn-group {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin: 10px 0 20px 0;
-}
-.footer {
-    text-align: center;
+  }
+  .aktion:hover {
+    background: #2a2a3a;
+    border-color: #c0b090;
+    box-shadow: 0 0 40px rgba(200,180,100,0.03);
+  }
+  .fuss {
+    margin-top: 25px;
     font-size: 0.6rem;
-    color: #4a3f35;
+    color: #3a3a4a;
     letter-spacing: 2px;
-    border-top: 1px solid rgba(212,160,23,0.06);
-    padding-top: 16px;
-    margin-top: 10px;
-}
-.footer span { color: var(--bronze); }
+  }
+  .fuss span { color: #5a5a6a; }
 </style>
 </head>
 <body>
 
-<div class="imperium">
+<div class="kern">
 
-    <h1>
-        ROMANUM IMPERIA
-        <small>NC · HUB · OCTA · POT · 6D</small>
-    </h1>
+  <h1>⚡ POT</h1>
+  <div class="sub">ohne Regeln · mit Gedanke · für dich</div>
 
-    <div class="sub">SENATVS POPVLVSQVE ROMANVS · AXIOMA · RESPO · CONTINVVM</div>
+  <div class="ausgabe" id="ausgabe">✦ bereit · leise · offen</div>
 
-    <!-- 6D-ACHSEN -->
-    <div class="achse">
-        <div class="achse-item">
-            <span class="sym">▲</span>
-            <span class="label">HÖHE</span>
-            <span class="desc">Caelum · Himmel</span>
-        </div>
-        <div class="achse-item">
-            <span class="sym">◀▶</span>
-            <span class="label">BREITE</span>
-            <span class="desc">Terra · Erde</span>
-        </div>
-        <div class="achse-item">
-            <span class="sym">▼</span>
-            <span class="label">TIEFE</span>
-            <span class="desc">Mare · Meer</span>
-        </div>
-        <div class="achse-item">
-            <span class="sym">⬆</span>
-            <span class="label">MYSTERY-HÖHE</span>
-            <span class="desc">Aether · Unsichtbar</span>
-        </div>
-        <div class="achse-item">
-            <span class="sym">⬌</span>
-            <span class="label">MYSTERY-BREITE</span>
-            <span class="desc">Fatum · Schicksal</span>
-        </div>
-        <div class="achse-item">
-            <span class="sym">⬇</span>
-            <span class="label">MYSTERY-TIEFE</span>
-            <span class="desc">Tempus · Zeit</span>
-        </div>
-    </div>
+  <button class="aktion" id="aktionBtn">✦ einen Gedanken kristallisieren</button>
 
-    <!-- AUSGABE -->
-    <div class="output" id="output">⚡ POT · Romanum Imperia · 6D · Axioma · Continuum · bereit</div>
-
-    <!-- AKTIONEN -->
-    <div class="btn-group">
-        <button class="btn" id="actionBtn">✦ Kristall · Respo · Axiom</button>
-        <button class="btn" id="resetBtn">⟲ SPQR · Reset</button>
-    </div>
-
-    <div class="footer">
-        <span>🧩</span> NC-Hub-All · OCTA · POT · 6D · Romanum Imperia · <span>wieimmer4u</span>
-    </div>
+  <div class="fuss">
+    <span>🧩</span> DA · NE · BEN · 6D · wieimmer4u
+  </div>
 
 </div>
 
 <script>
-// ─── ROMANUM IMPERIA · POT · 6D ───
-const IMPERIUM = {
+// ─── POT – ohne Regeln ────────────────────────────
+const POT = {
 
-    // P – Primär
-    P: (wert) => ({ primär: wert, status: 'frei', symbol: 'P' }),
+  P: (wert) => ({ primär: wert, status: 'frei' }),
+  O: (sache) => ({ sache, verordnet: true }),
+  T: (zahlen) => ({
+    verbindung: 'all4all',
+    balance: (zahlen.reduce((a,b) => a+b, 0) / zahlen.length).toFixed(2)
+  }),
 
-    // O – Ordert
-    O: (sache, code = 'js') => ({ sache, code, verordnet: true, symbol: 'O' }),
+  D6: () => ({
+    höhe: 'Caelum',
+    breite: 'Terra',
+    tiefe: 'Mare',
+    mysteryHöhe: 'Aether',
+    mysteryBreite: 'Fatum',
+    mysteryTiefe: 'Tempus'
+  }),
 
-    // T – Tele-Matrix
-    T: (matrix) => ({
-        verbindung: 'all4all',
-        balance: (matrix.reduce((a,b) => a + b, 0) / matrix.length).toFixed(2),
-        modus: 'alltechall',
-        symbol: 'T'
-    }),
-
-    // 6D – Achsen
-    D6: () => ({
-        höhe: 'Caelum',
-        breite: 'Terra',
-        tiefe: 'Mare',
-        mysteryHöhe: 'Aether',
-        mysteryBreite: 'Fatum',
-        mysteryTiefe: 'Tempus'
-    }),
-
-    // RESONANZ – Das Herz
-    resonanz: (input) => ({
-        empfangen: input,
-        geantwortet: `Romanum Imperia · ${input} · balanciert · 6D · Axioma`,
-        zeit: Date.now()
-    }),
-
-    // KRISTALL
-    kristall: (impuls) => {
-        const p = IMPERIUM.P(impuls);
-        const o = IMPERIUM.O('Axiom', 'js');
-        const t = IMPERIUM.T([3, 9, 27, 81]);
-        const d6 = IMPERIUM.D6();
-        const r = IMPERIUM.resonanz(impuls);
-        return {
-            imperium: 'Romanum Imperia',
-            impuls,
-            primär: p,
-            ordert: o,
-            tele: t,
-            '6D': d6,
-            resonanz: r,
-            hype: '✦ SPQR · Axioma · Continuum · Freude · Harmonie',
-            stamp: Date.now()
-        };
-    }
+  kristall: (impuls) => {
+    return {
+      gedanke: impuls,
+      primär: POT.P(impuls),
+      ordert: POT.O('Axiom'),
+      tele: POT.T([3,9,27,81]),
+      d6: POT.D6(),
+      stamp: Date.now()
+    };
+  }
 };
 
-// ─── DOM ───
-const output = document.getElementById('output');
-const actionBtn = document.getElementById('actionBtn');
-const resetBtn = document.getElementById('resetBtn');
+// ─── DOM ──────────────────────────────────────────────
+const ausgabe = document.getElementById('ausgabe');
+const aktionBtn = document.getElementById('aktionBtn');
 
-function showKristall() {
-    const impulse = ['81', '243', '2268', '641', 'POT', 'Cubik', 'Romanum', 'Aether'];
-    const wahl = impulse[Math.floor(Math.random() * impulse.length)];
-    const result = IMPERIUM.kristall(wahl);
-    output.textContent = JSON.stringify(result, null, 2);
+function show() {
+  const impulse = ['81', '243', '2268', '641', 'POT', 'Cubik', 'Romanum'];
+  const wahl = impulse[Math.floor(Math.random() * impulse.length)];
+  const ergebnis = POT.kristall(wahl);
+  ausgabe.textContent = JSON.stringify(ergebnis, null, 2);
 }
 
-actionBtn.addEventListener('click', showKristall);
-
-resetBtn.addEventListener('click', () => {
-    output.textContent = '⚡ SPQR · Romanum Imperia · bereit · 6D · Axioma · Continuum';
-});
-
-// ─── INIT ──────────────────────────────────
-setTimeout(showKristall, 400);
+aktionBtn.addEventListener('click', show);
+setTimeout(show, 300);
 </script>
 
 </body>
